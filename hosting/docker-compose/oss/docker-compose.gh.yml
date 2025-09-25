@@ -12,7 +12,7 @@ services:
         image: ghcr.io/agenta-ai/${AGENTA_WEB_IMAGE_NAME:-agenta-web}:${AGENTA_WEB_IMAGE_TAG:-latest}
 
         env_file:
-            - .env
+            - ${ENV_FILE:-./.env.oss.gh}
 
         networks:
             - agenta-oss-gh-network
